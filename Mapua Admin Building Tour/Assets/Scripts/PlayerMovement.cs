@@ -20,6 +20,5 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate() {
         body.velocity = movementDirection * movementSpeed;
-        // body.velocity.Normalize();
     }
 }
