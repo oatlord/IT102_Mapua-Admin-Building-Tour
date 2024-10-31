@@ -101,7 +101,6 @@ public class SearchManager : MonoBehaviour
     {
         target = new Vector2(x, y);
         found = true;
-        
     }
 
     void FixedUpdate()
