@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
+using UnityEngine.PlayerLoop;
 
 public class StarFeedback : MonoBehaviour
 {
@@ -14,14 +16,19 @@ public class StarFeedback : MonoBehaviour
     int buttonIndex;
     decimal rating;
 
+    public SendDataToServer sendDataToServer;
+    public int feedbackValue = -1;
+
+    void Start()
+    {
+        // Find the button and add a listener to it
+        Button button = GetComponent<Button>();
+        button.onClick.AddListener(OnButtonClick);
+    }
+
     public void isClicked()
     {
         String name = EventSystem.current.currentSelectedGameObject.name;
-        //if (name.Equals("Star"))
-        //{
-        //    Debug.Log("0 pressed");
-        //    starButtons[0].image.sprite = filledStar;
-        //}
         switch (name)
         {
             case "Star 0":
@@ -29,6 +36,7 @@ public class StarFeedback : MonoBehaviour
                 Debug.Log("0 pressed");
                 changeSprite(buttonIndex);
                 rating = 1.0m;
+                Debug.Log(rating);
                 break;
             case "Star 1":
                 buttonIndex = 1;
@@ -71,6 +79,47 @@ public class StarFeedback : MonoBehaviour
         for (int i = 0; i <= buttonIndex; i++)
         {
             changeSprite(i);
+        }
+    }
+
+    public void getRating()
+    {
+        Test();
+        Debug.Log("test");
+    }
+
+    void Test() => StartCoroutine(GetRequest_Coroutine());
+
+    IEnumerator GetRequest_Coroutine()
+    {
+        string url = "https://localhost:7115/api/Feedback";
+        using (UnityWebRequest www = UnityWebRequest.Get(url)) 
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Received: " + www.downloadHandler.text);
+            }
+            else
+            {
+                Debug.Log("Error: " + www.error);
+            }
+        } // The using block ensures www.Dispose() is called when this block is exited
+
+    }
+
+    private void OnButtonClick()
+    {
+        // Check if feedbackValue is set and valid
+        if (feedbackValue >= 0)
+        {
+            // Call the method in SendDataToServer to send the integer
+            sendDataToServer.SendIntegerToServer(feedbackValue);
+        }
+        else
+        {
+            Debug.LogError("Invalid feedback value.");
         }
     }
 }
