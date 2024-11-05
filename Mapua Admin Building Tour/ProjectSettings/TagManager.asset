@@ -44,3 +44,6 @@ TagManager:
   - name: 'player '
     uniqueID: 1199959377
     locked: 0
+  - name: wizz
+    uniqueID: 1712400883
+    locked: 0
