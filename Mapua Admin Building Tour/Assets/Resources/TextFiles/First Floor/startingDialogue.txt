@@ -1,0 +1,5 @@
+Welcome to the Mapua Admin Building Virtual Tour!
+I am Wizz, your virtual tour guide.
+To move your character, use your WASD keys.
+To search for an area, type it into the search bar, and you will be guided by my magic to the area you're searching for.
+Finally, to move between floors, enter the stairs or the elevators.
