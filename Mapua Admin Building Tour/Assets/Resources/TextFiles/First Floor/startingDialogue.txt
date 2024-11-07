@@ -1,5 +1,9 @@
-Welcome to the Mapua Admin Building Virtual Tour!
-I am Wizz, your virtual tour guide.
-To move your character, use your WASD keys.
+Welcome to the Mapua Admin Building Virtual Tour, fellow user!
+I am Wizz, your friendly virtual tour guide, hoho!
+Before we begin, I will orient you on how to take on this magical experience.
+To move your character, use your directional keys (WASD or arrow).
 To search for an area, type it into the search bar, and you will be guided by my magic to the area you're searching for.
-Finally, to move between floors, enter the stairs or the elevators.
+Finally, to move between floors, enter the stairs.
+For simplicity sake, the stairs on your left are ascending stairs, and those to the right are descending stairs. 
+However, don't forget, in real life, you can use these stairs however you want, hohohohoho!
+Now, let us begin the journey, my friend!
