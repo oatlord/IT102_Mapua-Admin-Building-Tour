@@ -41,9 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 'player '
-    uniqueID: 1199959377
+  - name: Player
+    uniqueID: 2889153645
     locked: 0
-  - name: wizz
+  - name: Wizz Sprite
     uniqueID: 1712400883
+    locked: 0
+  - name: Dialogue Box
+    uniqueID: 776817007
     locked: 0
