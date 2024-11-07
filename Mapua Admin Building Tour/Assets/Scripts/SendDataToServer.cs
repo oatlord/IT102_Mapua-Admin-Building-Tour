@@ -1,28 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using System.Collections;
 
 public class SendDataToServer : MonoBehaviour
 {
-    private const string url = "http://your-server-url/api/endpoint"; // Replace with your actual URL
+    public string url = "https://localhost:7115/api/Feedback";
 
-    // Function to send an integer to the server
-    public void SendIntegerToServer(int value)
-    {
-        StartCoroutine(SendPostRequest(value));
-    }
-
-    private IEnumerator SendPostRequest(int value)
+    public IEnumerator SendPostRequest(int feedbackScore)
     {
         // Create the JSON object to send
-        string jsonData = JsonUtility.ToJson(new { integerValue = value });
+        FeedbackData feedbackData = new FeedbackData(0, feedbackScore);
+        string jsonData = JsonUtility.ToJson(feedbackData);
+
+        Debug.Log("JSON Data: " + jsonData); // Log the JSON data
 
         // Create a new UnityWebRequest
-        using (UnityWebRequest request = UnityWebRequest.PostWwwForm(url, jsonData))
+        using (UnityWebRequest request = new UnityWebRequest(this.url, "POST"))
         {
             // Set the content type to JSON
             request.SetRequestHeader("Content-Type", "application/json");
-            
+
             // Upload the JSON data
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
             request.uploadHandler = new UploadHandlerRaw(bodyRaw);
@@ -42,26 +40,18 @@ public class SendDataToServer : MonoBehaviour
             }
         }
     }
-}
 
-/**
-To create a button in Unity that calls the SendIntegerToServer function when clicked, you can use the following code example.
 
-... some codes here
-
-    private void OnButtonClick()
+    [System.Serializable]
+    public class FeedbackData
     {
-        // Get the integer from the InputField
-        if (int.TryParse(inputField.text, out int value))
+        public int feedback_id;
+        public int feedback_score;
+        public FeedbackData(int id, int score)
         {
-            // Call the method in DatabaseManager to send the integer
-            SendDataToServer.SendIntegerToServer(value);
-        }
-        else
-        {
-            Debug.LogError("Invalid integer input.");
+            feedback_id = id;
+            feedback_score = score;
         }
     }
+}
 
-... some codes here
-**/
