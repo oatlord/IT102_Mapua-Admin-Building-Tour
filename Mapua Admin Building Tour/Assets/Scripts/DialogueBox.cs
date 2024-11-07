@@ -17,10 +17,19 @@ public class DialogueBox : MonoBehaviour
     private int index;
     private string path;
 
+    public bool isOpeningDialogue;
+
     private void Awake()
     {
-        gameObject.SetActive(false);
-        Wizard.SetActive(false);
+        if (isOpeningDialogue == true)
+        {
+            gameObject.SetActive(true);
+            Wizard.SetActive(true);
+        } else
+        {
+            gameObject.SetActive(false);
+            Wizard.SetActive(false);
+        }
     }
     void Start()
     {

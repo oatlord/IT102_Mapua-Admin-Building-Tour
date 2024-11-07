@@ -58,6 +58,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7781983547937817157}
     - target: {fileID: 6933276789016611193, guid: dabe23faae2720f468c1904d22de43fe, type: 3}
+      propertyPath: txtAsset
+      value: 
+      objectReference: {fileID: 4900000, guid: ce9aee68f6cf79643b407c88bbce2746, type: 3}
+    - target: {fileID: 6933276789016611193, guid: dabe23faae2720f468c1904d22de43fe, type: 3}
+      propertyPath: textSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933276789016611193, guid: dabe23faae2720f468c1904d22de43fe, type: 3}
       propertyPath: WizardSprite
       value: 
       objectReference: {fileID: 7781983547937817157}
@@ -161,15 +169,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 805105573222632678, guid: bb707db2b2c205145bef0e4ab75beb4c, type: 3}
       propertyPath: m_LocalScale.x
-      value: -6.369011
+      value: -6.5230937
       objectReference: {fileID: 0}
     - target: {fileID: 805105573222632678, guid: bb707db2b2c205145bef0e4ab75beb4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.55
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 805105573222632678, guid: bb707db2b2c205145bef0e4ab75beb4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.46
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 805105573222632678, guid: bb707db2b2c205145bef0e4ab75beb4c, type: 3}
       propertyPath: m_LocalPosition.z

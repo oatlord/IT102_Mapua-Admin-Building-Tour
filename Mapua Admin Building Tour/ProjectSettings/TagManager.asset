@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Canteen
+  - Stairs Up
+  - Stairs Down
   layers:
   - Default
   - TransparentFX

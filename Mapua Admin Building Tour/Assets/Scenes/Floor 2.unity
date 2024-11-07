@@ -603,6 +603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs Collider
       objectReference: {fileID: 0}
+    - target: {fileID: 3363542066451435276, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
+      propertyPath: m_TagString
+      value: Stairs Up
+      objectReference: {fileID: 0}
     - target: {fileID: 6585700850132733130, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
       propertyPath: m_Size.y
       value: 0.28569782
@@ -2104,6 +2108,10 @@ PrefabInstance:
     - target: {fileID: 3363542066451435276, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
       propertyPath: m_Name
       value: Stairs Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363542066451435276, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
+      propertyPath: m_TagString
+      value: Stairs Down
       objectReference: {fileID: 0}
     - target: {fileID: 6585700850132733130, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
       propertyPath: m_Size.x

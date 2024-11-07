@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 225625279}
   m_Layer: 0
   m_Name: CanteenTrigger
-  m_TagString: Canteen
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 237382844}
   m_Layer: 0
   m_Name: CanteenCollider
-  m_TagString: Canteen
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,10 +549,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanteenDialogue
       objectReference: {fileID: 0}
-    - target: {fileID: 3374998528416018358, guid: 53abac1f554e774478e9ec39c2b70266, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3802285233268828141, guid: 53abac1f554e774478e9ec39c2b70266, type: 3}
       propertyPath: m_LocalPosition.x
       value: -954.34283
@@ -592,22 +588,6 @@ PrefabInstance:
     - target: {fileID: 3802285233268828141, guid: 53abac1f554e774478e9ec39c2b70266, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5705790345867773342, guid: 53abac1f554e774478e9ec39c2b70266, type: 3}
-      propertyPath: txtAsset
-      value: 
-      objectReference: {fileID: 4900000, guid: ce9aee68f6cf79643b407c88bbce2746, type: 3}
-    - target: {fileID: 8344423844665397558, guid: 53abac1f554e774478e9ec39c2b70266, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -6.5230937
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344423844665397558, guid: 53abac1f554e774478e9ec39c2b70266, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344423844665397558, guid: 53abac1f554e774478e9ec39c2b70266, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4487,6 +4467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs Collider
       objectReference: {fileID: 0}
+    - target: {fileID: 3363542066451435276, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
+      propertyPath: m_TagString
+      value: Stairs Up
+      objectReference: {fileID: 0}
     - target: {fileID: 6585700850132733130, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
       propertyPath: m_Size.x
       value: 0.87422705
@@ -4566,6 +4550,10 @@ PrefabInstance:
     - target: {fileID: 3363542066451435276, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
       propertyPath: m_Name
       value: Stairs Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363542066451435276, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
+      propertyPath: m_TagString
+      value: Stairs Down
       objectReference: {fileID: 0}
     - target: {fileID: 6585700850132733130, guid: 5fdd72507b9b0f345a234200506431c0, type: 3}
       propertyPath: m_Size.x
@@ -4789,7 +4777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8430197130611128595, guid: 811a38bb4f4ddee438fd029360955c12, type: 3}
       propertyPath: m_TagString
-      value: Canteen
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8793369634794166169, guid: 811a38bb4f4ddee438fd029360955c12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4985,6 +4973,10 @@ PrefabInstance:
       propertyPath: txtAsset
       value: 
       objectReference: {fileID: 4900000, guid: 36f95ac8f4e6f344dab23efc648ef36e, type: 3}
+    - target: {fileID: 5705790345867773342, guid: 53abac1f554e774478e9ec39c2b70266, type: 3}
+      propertyPath: isOpeningDialogue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8344423844665397558, guid: 53abac1f554e774478e9ec39c2b70266, type: 3}
       propertyPath: m_LocalScale.x
       value: -6.4791327
