@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor 4.unity
     guid: df86177687b1dd94483c3dbd6d7fb942
+  - enabled: 1
+    path: Assets/Scenes/Feedback Screen.unity
+    guid: c84bfe74ab594df41b8fc6cc940d22f6
   m_configObjects: {}
