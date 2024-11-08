@@ -39,4 +39,9 @@ public class SceneManagement : MonoBehaviour
             }
         }
     }
+
+    public void ClickEndQuit()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
