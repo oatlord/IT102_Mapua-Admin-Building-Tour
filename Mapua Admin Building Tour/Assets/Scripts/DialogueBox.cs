@@ -25,6 +25,8 @@ public class DialogueBox : MonoBehaviour
         {
             gameObject.SetActive(true);
             Wizard.SetActive(true);
+            //isOpeningDialogue = false;
+            
         } else
         {
             gameObject.SetActive(false);
@@ -82,6 +84,11 @@ public class DialogueBox : MonoBehaviour
         {
             gameObject.SetActive(false);
             Wizard.SetActive(false);
+            if (isOpeningDialogue == true)
+            {
+                Destroy(gameObject);
+                Destroy(Wizard);
+            }
         }
     }
 
