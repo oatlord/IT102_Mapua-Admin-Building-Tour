@@ -3141,7 +3141,7 @@ GameObject:
   - component: {fileID: 1496690752}
   - component: {fileID: 1496690753}
   m_Layer: 0
-  m_Name: ExtraCollider (17)
+  m_Name: walbotom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
