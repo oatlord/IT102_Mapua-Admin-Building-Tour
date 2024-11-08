@@ -14,7 +14,7 @@ public class SceneManagement : MonoBehaviour
     }
     public void clickPlayButton()
     {
-        SceneManager.LoadScene("Floor 1");
+        SceneManager.LoadScene("intro-cutscene");
     }
 
     private void OnTriggerEnter2D(Collider2D other)

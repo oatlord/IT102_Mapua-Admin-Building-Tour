@@ -13,9 +13,7 @@ public class SceneChangeIntro : MonoBehaviour
     {
         changeTime -= Time.deltaTime;
         if(changeTime <= 0){
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene("Floor 1");
         }
-        
-        
     }
 }
