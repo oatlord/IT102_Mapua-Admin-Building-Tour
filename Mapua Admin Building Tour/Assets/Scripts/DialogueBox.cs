@@ -13,9 +13,9 @@ public class DialogueBox : MonoBehaviour
     public TextAsset txtAsset;
     public GameObject Wizard;
 
-
     private int index;
     private string path;
+    private string texts;
 
     public bool isOpeningDialogue;
 
@@ -26,7 +26,6 @@ public class DialogueBox : MonoBehaviour
             gameObject.SetActive(true);
             Wizard.SetActive(true);
             //isOpeningDialogue = false;
-            
         } else
         {
             gameObject.SetActive(false);
@@ -35,7 +34,8 @@ public class DialogueBox : MonoBehaviour
     }
     void Start()
     {
-        path = AssetDatabase.GetAssetPath(txtAsset);
+        //path = AssetDatabase.GetAssetPath(txtAsset);
+        texts = txtAsset.ToString();
         txtComponent.text = string.Empty;
         ReadText();
         StartDialogue();
@@ -94,14 +94,15 @@ public class DialogueBox : MonoBehaviour
 
     void ReadText()
     {
-        StreamReader reader = new StreamReader(path);
+        //StreamReader reader = new StreamReader(path);
 
-        string line;
+        //string line;
         string[] readlineCount;
 
         int count = 0;
-        line = reader.ReadToEnd();
-        readlineCount = line.Split("\n");
+        //line = reader.ReadToEnd();
+        //readlineCount = line.Split("\n");
+        readlineCount = texts.Split("\n");
         lines = new string[readlineCount.Length];
 
         foreach (string s in readlineCount)
